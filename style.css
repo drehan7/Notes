@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway Dots", monospace;
+}
+
+*:focus {
+  outline: none;
+}
+body {
+  background-color: #495057;
+  min-width: 30%;
+}
+
+header {
+  margin-top: 2%;
+  margin-left: 1%;
+  font-size: 50px;
+  color: #fdc500;
+  font-family: "Raleway Dots", monospace;
+}
+
+#dark-mode-button {
+  width: fit-content;
+}
+
+.all-notes {
+  width: 95%;
+  /* margin-left: 2rem;
+    margin-right: 2rem; */
+
+  margin-top: 3%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  /* grid-column-gap: 2rem; */
+  /* grid-template-columns: auto, auto, auto, auto; */
+}
+
+.create-new-note {
+  border-bottom: 1px dotted #e8eddf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  padding: 2rem;
+  padding-bottom: 2%;
+}
+.input-form {
+  display: flex;
+}
+
+.create-new-note input,
+input {
+  background-color: #6c757d;
+  font-weight: bolder;
+  padding-left: 0.6rem;
+  text-align: left;
+  font-size: 1.3rem;
+  color: #fff;
+  width: 90rem;
+  height: 3rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 40px;
+}
+
+input.new-note-input {
+  width: 100%;
+}
+
+.create-new-note button {
+  background-color: #495057;
+  font-size: 3rem;
+  color: #adb5bd;
+  border: none;
+  width: 20%;
+  height: auto;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-left: 7rem;
+}
+
+.create-new-note button:hover {
+  opacity: 0.85;
+  color: #fff;
+}
+
+.create-new-note ::placeholder {
+  color: white;
+  font-family: "Raleway Dots", monospace;
+}
+
+.note {
+  display: block;
+  margin: 1rem;
+  padding: 0.5rem;
+  min-width: 20%;
+  max-width: 25%;
+  width: fit-content;
+  height: 15%;
+  border-radius: 20px;
+  background-color: #343a40;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.selected-note {
+  background-color: #212529;
+
+  max-width: 15%;
+  display: block;
+  /* animation: editmodewide 0.5s 1; */
+}
+
+.bigger-note-input {
+  width: 20%;
+}
+
+.note-title {
+  text-decoration: underline;
+  color: #fdc500;
+  font-size: 18px;
+  font-family: "Raleway";
+}
+
+.note-date {
+  color: white;
+  font-size: 15px;
+  opacity: 0.3;
+}
+
+.note-body {
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /* border: 1px solid #6c757d; */
+  border: 3px solid green;
+  border-radius: 40px;
+  padding: 2rem;
+  overflow-wrap: break-word;
+}
+
+#delete-button-id {
+  background-color: #d90429;
+}
+
+#edit-button-id {
+  background-color: #fdc500;
+  color: black;
+}
+
+.note button {
+  background-color: #6c757d;
+  color: white;
+  width: 9rem;
+  height: auto;
+  border-radius: 40px;
+  font-weight: bold;
+}
+
+.edit-input-body {
+  width: 90%;
+  margin: 2%;
+}
+
+#edit-input-title-id {
+  width: 90%;
+}
+
+#edit-submit-button-id {
+  background-color: #fdc500;
+  color: black;
+}
+
+.hidden-delete-button {
+  display: none;
+}
+
+.note-count {
+  font-size: 25px;
+  color: white;
+  margin-right: 10%;
+  width: fit-content;
+}
