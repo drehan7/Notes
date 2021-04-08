@@ -116,13 +116,12 @@ function editNote(note) {
     let date_updated = new Date();
 
     if (editTitle.value.length > 0 || editBody.value.length > 0) {
-        fetch(baseNotesURL + noteId, {
-            method: 'PATCH',
+        fetch(baseNotesURL + noteId + "/", {
+            method: 'PUT',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 title: editTitle.value,
                 body: editBody.value,
-                date_created: moment(date_updated).format("llll")
             })
         })
             .then(res => res.json())
@@ -157,7 +156,7 @@ function showAllNotes() {
                 renderNote(d)
             }
             console.log('notes: ', data.length)
-            noteCount.innerHTML += data.length
+            noteCount.innerHTML = `Notes: ${data.length}`
         })
 
 
@@ -180,7 +179,7 @@ function renderNote(note) {
     noteBody.innerHTML = note.body;
     let noteDate = document.createElement('p');
     noteDate.className = 'note-date'
-    noteDate.innerHTML = "Last updated: " + note.date_created
+    noteDate.innerHTML = "Last updated: " + moment(note.date_updated).format('llll')
 
 
 
